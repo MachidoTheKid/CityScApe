@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo Chettan 2';
+}
+
+/*--------------------------Navbar setup-----------------------------------*/
+li a {
+
+    text-decoration: none;
+    color: black;
+    transition: 0.1s linear;
+    border-bottom: 0px solid rebeccapurple;
+
+
+}
+
+li a:hover {
+
+    text-decoration: none;
+
+    color: rebeccapurple;
+
+    border-bottom: 3px solid rebeccapurple;
+
+    padding-bottom: 5px;
+
+
+
+
+}
+
+
+.navbar {
+
+    width: 100%;
+    height: 15vh;
+    background-color: white;
+    top: 0;
+    z-index: 5;
+    box-shadow: 1px 6px 10px rgba(0, 0, 0, 0.3);
+
+
+}
+
+ul li {
+
+    list-style: none;
+    display: inline-block;
+    padding: 1em;
+}
+
+ul {
+
+    margin-left: auto;
+    margin-right: 100px;
+}
+
+#logo {
+
+    margin-left: 50px;
+}
+
+#submenu {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: white;
+    z-index: 20;
+    text-align: center;
+
+    position: fixed;
+    font-size: 30px;
+    color: white;
+    visibility: hidden;
+    transition: 300ms ease-in-out;
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .line {
+        width: 30px;
+        height: 3px;
+        background-color: rebeccapurple;
+        margin: 5px;
+
+    }
+
+    .sub .submenu {
+
+        visibility: visible;
+    }
+
+    .sub .submenu #it1 {
+
+        visibility: visible;
+    }
+
+    .sub .submenu #it2 {
+
+        visibility: visible;
+    }
+
+    .sub .submenu #it3 {
+
+        visibility: visible;
+    }
+
+    .sub .submenu #it4 {
+
+        visibility: visible;
+    }
+
+    .sub .submenu #closer {
+
+        visibility: visible;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    .navbar {
+        position: none;
+    }
+
+    .hamburger {
+
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        margin-right: 50px;
+        z-index: 21;
+    }
+
+    .navi .navbar .navigation {
+
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        display: none;
+
+
+    }
+
+
+}
+
+/*--------------------------Banner Setup-----------------------------------*/
+
+.container-md {
+
+    display: flex;
+    margin-top: 10em;
+    text-align: justify;
+    color: white;
+    background-color: rgba(102, 51, 153, 0.5);
+
+}
+
+.banner p {
+    padding: 0px 55px 0 55px;
+    font-size: 16px;
+    text-align: center;
+
+}
+
+#title {
+
+    text-align: center;
+}
+
+
+#backvid {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+
+}
+
+
+
+#explore {
+    text-align: center;
+    text-decoration: none;
+    background: white;
+    min-width: 200px;
+    min-height: 50px;
+    width: 500px;
+    border: 1px solid white;
+    border-collapse: separate;
+    border-radius: 20px;
+    padding: 10px 40px 10px;
+    font-size: 20px;
+    color: rebeccapurple;
+    transition: ease-in-out 500ms;
+}
+
+
+#explore:hover {
+    background: black;
+    border: 1px solid black;
+    color: white;
+}
+
+#active {
+    color: rebeccapurple;
+
+    border-bottom: 3px solid rebeccapurple;
+
+    padding-bottom: 5px;
+
+}
+
+
+
+/*-------------------Main Content Setup----------------------------*/
+
+
+.content {
+
+    color: black;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 20% 80%;
+    margin-top: 10em;
+    margin-left: 7.5%;
+    width: 85%;
+    height: 500px auto;
+    background-color: white;
+
+}
+
+#ctitle {
+
+    margin-top: 20px;
+    color: rebeccapurple;
+}
+
+.content p {
+
+    margin-top: 30px;
+}
+
+.p1,
+.p2,
+.p3 {
+
+    margin-top: 30px;
+}
+
+
+/*-------------------Footer Setup----------------------------*/
+
+.footer {
+
+
+    width: 100%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    height: 120px;
+    background-color: white;
+    margin-top: 120px;
+}
+
+#botlogo {
+
+    margin-top: 20px;
+}
+
+#copyright {
+
+    padding: 0;
+    margin: 0;
+}
+
+.footeritem {
+
+    margin-top: 35px;
+}

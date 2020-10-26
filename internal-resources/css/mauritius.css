@@ -1,0 +1,451 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo Chettan 2';
+}
+
+/*--------------------------Navbar setup-----------------------------------*/
+
+li a {
+
+    text-decoration: none;
+    color: black;
+    transition: 0.1s linear;
+    border-bottom: 0px solid rebeccapurple;
+
+
+}
+
+li a:hover {
+
+    text-decoration: none;
+
+    color: rebeccapurple;
+
+    border-bottom: 3px solid rebeccapurple;
+
+    padding-bottom: 5px;
+
+
+
+
+}
+
+#active {
+    color: rebeccapurple;
+
+    border-bottom: 3px solid rebeccapurple;
+
+    padding-bottom: 5px;
+
+}
+
+
+.navbar {
+
+    width: 100%;
+    height: 15vh;
+    background-color: white;
+    top: 0;
+    z-index: 5;
+    box-shadow: 1px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+ul li {
+
+    list-style: none;
+    display: inline-block;
+    padding: 1em;
+}
+
+ul {
+
+    margin-left: auto;
+    margin-right: 50px;
+    display: flex;
+    height: 100%;
+    width: 50%;
+    align-items: center;
+    z-index: 6;
+}
+
+#logo {
+
+    margin-left: 50px;
+}
+
+#submenu {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: white;
+    z-index: 20;
+
+    position: fixed;
+    font-size: 30px;
+    color: white;
+    visibility: hidden;
+    transition: 300ms ease-in-out;
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .line {
+        width: 30px;
+        height: 3px;
+        background-color: rebeccapurple;
+        margin: 5px;
+
+    }
+
+    .sub .submenu {
+
+        visibility: visible;
+    }
+
+    .sub .submenu #it1 {
+
+        visibility: visible;
+    }
+
+    .sub .submenu #it2 {
+
+        visibility: visible;
+    }
+
+    .sub .submenu #it3 {
+
+        visibility: visible;
+    }
+
+    .sub .submenu #it4 {
+
+        visibility: visible;
+    }
+
+    .sub .submenu #closer {
+
+        visibility: visible;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    .navbar {
+        position: none;
+    }
+
+    .hamburger {
+
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        margin-right: 50px;
+        z-index: 21;
+    }
+
+    .navi .navbar .navigation {
+
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        display: none;
+
+
+    }
+
+
+}
+
+/*--------------------------Banner Setup-----------------------------------*/
+
+.container-fluid {
+
+    display: flex;
+    margin-top: 0;
+    text-align: center;
+    color: white;
+    background-color: rgba(102, 51, 153, 0.5);
+    padding: auto;
+
+}
+
+.time {
+
+    margin-top: 50px;
+}
+
+.banner p {
+    padding: 0px 120px 0 120px;
+    font-size: 16px;
+    text-align: center;
+
+}
+
+.container-fluid .banner {
+
+    width: auto;
+}
+
+#title {
+
+    text-align: center;
+}
+
+
+#backvid {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+
+}
+
+.weatherinfo {
+
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(autofit, minmax(100px, 0.5fr));
+    text-align: center;
+
+}
+
+.daycontainer {
+
+    text-align: center;
+    display: inline-block;
+    width: 0.2fr;
+
+}
+
+.container-fluid .banner .daycontainer .day {
+
+    font-size: 20px;
+}
+
+.container-fluid .banner .daycontainer .day2 {
+
+    font-size: 20px;
+}
+
+.container-fluid .banner .daycontainer .day3 {
+
+    font-size: 20px;
+}
+
+.container-fluid .banner .daycontainer .day4 {
+
+    font-size: 20px;
+}
+
+
+.container-fluid .banner .time {
+
+    font-size: 40px;
+}
+
+/*-------------------Main Content Setup----------------------------*/
+
+.location {
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    background-color: white;
+    width: 100%;
+    height: 350px auto;
+}
+
+.location .map {
+
+    margin: 50px;
+}
+
+.map iframe {
+
+
+    left: 0;
+    top: 0;
+    height: 300px;
+    width: 100%;
+}
+
+#mapholder {
+
+    height: 100%;
+    width: 100%;
+    margin-top: 30px;
+}
+
+
+.content {
+
+    color: black;
+    text-align: center;
+    /*display: flex;
+    flex-wrap: wrap;*/
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50%, max-content));
+    grid-template-rows: 20% 80%;
+    width: 100%;
+    height: 550px auto;
+    min-height: 200px;
+    background-color: white;
+
+}
+
+#ctitle {
+
+    margin-top: 100px;
+    color: rebeccapurple;
+}
+
+.content p {
+
+    margin-top: 30px;
+}
+
+.p1,
+.p2,
+.p3 {
+
+    margin-top: 10px;
+}
+
+.p1,
+.p3 {
+
+    padding: 50px;
+}
+
+
+.container {
+
+    background-color: white;
+    height: 500px;
+    width: 100%;
+    z-index: 0;
+}
+
+#caption1,
+#caption2,
+#caption3 {
+
+    background-color: rgba(102, 51, 153, 0.5);
+    padding: 20px;
+}
+
+.title {
+
+    font-size: 40px;
+}
+
+.vtitle h1 {
+
+    color: rebeccapurple;
+    font-size: 50px;
+
+}
+
+
+.qol {
+    width: 100%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: auto;
+    max-height: 700px;
+    background-color: white;
+    padding: 75px;
+}
+
+.calculator {
+
+    width: 100%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 100%;
+    height: auto;
+    background-color: white;
+    padding: 100px;
+
+
+}
+
+.calc1 {
+
+    width: 100%;
+    text-align: center;
+}
+
+.qol1 {
+
+    padding: 20px;
+    margin-top: 5em;
+}
+
+#chart {
+
+    height: auto;
+    width: auto;
+}
+
+.chartcontainer {
+
+    background-color: rgba(102, 51, 153, 0.5);
+
+
+
+}
+
+.calculator .c1 {
+
+    padding: 40px;
+}
+
+
+/*-------------------Footer Setup----------------------------*/
+
+.footer {
+
+
+    width: 100%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    height: 120px auto;
+    background-color: white;
+}
+
+#botlogo {
+
+    margin-top: 20px;
+}
+
+#copyright {
+
+    padding: 0;
+    margin: 0;
+}
+
+.footeritem {
+
+    margin-top: 35px;
+}
+
+.bg {
+
+    width: 100%;
+    background-color: white;
+    height: 650px auto;
+    text-align: center;
+}
