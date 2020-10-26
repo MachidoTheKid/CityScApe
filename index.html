@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="internal-resources/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
+    <title>CityScApe</title>
+</head>
+
+<body>
+    <header>
+        <div class="navi">
+
+            <div class="sub">
+
+
+                <ul id="submenu">
+                    <li class="subnavitem" id="it1"><a href="glasgow.html">Glasgow, Scotland</a></li>
+                    <li class="subnavitem" id="it2"><a href="ports-louis.html">Port Louis, Mauritius</a></li>
+                    <li class="subnavitem" id="it3"><a href="tokyo.html">Tokyo, Japan</a></li>
+                    <li class="subnavitem" id="it4"><a href="">About Us</a></li>
+                    <li class="subnavitem" id="closer"><a href="">CLOSE MENU</a></li>
+
+                    <script>
+                        var close = document.getElementById('closer');
+                        var item = document.querySelectorAll('.subnavitem');
+
+
+                        close.addEventListener('click', function (closer) {
+
+                            document.getElementById("submenu").style.visibility = "hidden";
+                            document.getElementById("submenu").style.display = "none";
+
+
+
+
+
+                            closer.preventDefault();
+
+
+
+                        });
+                    </script>
+
+
+
+                </ul>
+
+
+
+
+            </div>
+
+            <nav class="navbar" style="position: sticky;">
+
+                <div class="hamburger">
+
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+
+                </div>
+
+                <script>
+                    var ham = document.querySelector('.hamburger');
+
+                    ham.addEventListener('click', () => {
+
+                        document.getElementById("submenu").style.visibility = "visible";
+                        document.getElementById("submenu").style.display = "flex";
+
+
+                    });
+                </script>
+
+                <a class="navbar-brand" href="index.html">
+                    <img src="internal-resources/img/CityScApe.png" width="75px" height="75px " alt="CityScApe Logo"
+                        id="logo">
+                </a>
+                <ul class="navigation">
+                    <li class="navitem"><a href="glasgow.html">Glasgow, Scotland</a></li>
+                    <li class="navitem"><a href="ports-louis.html">Port Louis, Mauritius</a></li>
+                    <li class="navitem"><a href="tokyo.html">Tokyo, Japan</a></li>
+                    <li class="navitem"><a href="">About Us</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="container-md" style="max-width:48em; height: 22em;">
+
+            <div class="banner">
+
+                <div style="text-align: center;">
+                    <h4 style="margin-top: 2em;">Your next dream city is only a click away. </h4>
+                </div>
+
+
+                <h1 id="title">CityScApe</h1>
+                <p>CityScApe is a dedicated service made in order to help you discover where you want to move to
+                    next.
+                    We collect data from all over the world and provide that all here in a concise, easy to read
+                    manner. Discover your next destination. </p>
+
+                <div style="text-align: center;">
+
+
+                    <a href="#" id="explore">Explore</a>
+
+                    <script>
+                        var button = document.getElementById("explore").onclick = function () {
+
+                            var counter = Math.floor(Math.random() * 3);
+
+                            if (counter == 0) {
+
+                                document.getElementById("explore").href = "glasgow.html";
+                                console.log(counter);
+
+
+
+
+                            }
+
+                            if (counter == 1) {
+
+                                document.getElementById("explore").href = "ports-louis.html";
+                                console.log(counter);
+
+
+
+
+                            }
+
+                            if (counter == 2) {
+
+                                document.getElementById("explore").href = "tokyo.html";
+                                console.log(counter);
+
+
+
+
+                            }
+
+
+
+
+                        }
+                    </script>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+        <video id="backvid" poster="internal-resources/img/postimage.PNG" autoplay muted loop>
+
+            <source src="internal-resources/video/cities.mp4" type="video/mp4">
+
+        </video>
+
+
+
+    </header>
+
+    <main>
+
+        <div class="content">
+
+            <div></div>
+
+            <div class="center">
+                <h1 id="ctitle">What We Provide</h1>
+            </div>
+            <div></div>
+
+            <div class="p1">
+
+                <h2 class="subtitle">Real-time Weather</h2>
+
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80" height="80" viewBox="0 0 172 172"
+                    style=" fill:#000000;">
+                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                        stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                        font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                        style="mix-blend-mode: normal">
+                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                        <g fill="#663399" class="icon">
+                            <path
+                                d="M159.4225,0c-0.98094,0.17469 -1.85437,0.7525 -2.365,1.6125c0,0 -2.19031,3.60125 -4.4075,7.8475c-1.10187,2.12313 -2.24406,4.50156 -3.1175,6.665c-0.87344,2.16344 -1.6125,4.00438 -1.6125,6.235c0,6.61125 5.42875,12.04 12.04,12.04c6.61125,0 12.04,-5.42875 12.04,-12.04c0,-2.23062 -0.73906,-4.07156 -1.6125,-6.235c-0.87344,-2.16344 -2.01562,-4.54187 -3.1175,-6.665c-2.21719,-4.24625 -4.4075,-7.8475 -4.4075,-7.8475c-0.67187,-1.06156 -1.86781,-1.67969 -3.1175,-1.6125c-0.1075,0 -0.215,0 -0.3225,0zM85.6775,3.3325c-0.14781,0.02688 -0.29562,0.06719 -0.43,0.1075c-1.59906,0.36281 -2.72781,1.80063 -2.6875,3.44v13.8675c-45.6875,1.505 -82.56,32.895 -82.56,79.0125c0.01344,1.3975 0.86,2.64719 2.16344,3.17125c1.29,0.51063 2.78156,0.20156 3.74906,-0.80625c0,0 11.395,-11.61 25.37,-11.61c13.59875,0 26.5525,11.7175 26.5525,11.7175c0.71219,0.68531 1.69313,1.03469 2.67406,0.95406c0.99437,-0.08063 1.89469,-0.59125 2.48594,-1.38406c0,0 7.28313,-9.50031 19.565,-11.0725v58.3725c0,0.1075 0,0.215 0,0.3225v0.215c0,0.1075 0,0.215 0,0.3225c-0.17469,8.26406 -7.17562,15.1575 -15.48,15.1575c-8.41187,0 -15.48,-7.06812 -15.48,-15.48c0.02688,-1.06156 -0.44344,-2.06937 -1.26312,-2.74125c-0.80625,-0.67187 -1.89469,-0.92719 -2.92938,-0.69875c-1.59906,0.36281 -2.72781,1.80063 -2.6875,3.44c0,12.22813 10.13188,22.36 22.36,22.36c12.05344,0 22.06438,-9.83625 22.36,-21.8225c0.01344,-0.17469 0.01344,-0.36281 0,-0.5375c0,-0.1075 0,-0.215 0,-0.3225v-58.5875c12.28188,1.57219 19.565,11.0725 19.565,11.0725c0.59125,0.83313 1.51844,1.37063 2.53969,1.45125c1.00781,0.08063 2.01563,-0.29562 2.72781,-1.02125c0,0 12.08031,-11.7175 26.445,-11.7175c14.36469,0 25.2625,11.61 25.2625,11.61c0.95406,1.08844 2.48594,1.45125 3.84313,0.92719c1.34375,-0.52406 2.21719,-1.84094 2.17687,-3.29219c0,-46.1175 -36.8725,-77.5075 -82.56,-79.0125v-13.8675c0.04031,-0.99437 -0.36281,-1.94844 -1.075,-2.62031c-0.72562,-0.68531 -1.70656,-1.02125 -2.6875,-0.92719zM11.5025,6.88c-0.98094,0.17469 -1.85437,0.7525 -2.365,1.6125c0,0 -2.19031,3.60125 -4.4075,7.8475c-1.10187,2.12313 -2.24406,4.50156 -3.1175,6.665c-0.87344,2.16344 -1.6125,4.00438 -1.6125,6.235c0,6.61125 5.42875,12.04 12.04,12.04c6.61125,0 12.04,-5.42875 12.04,-12.04c0,-2.23062 -0.73906,-4.07156 -1.6125,-6.235c-0.87344,-2.16344 -2.01562,-4.54187 -3.1175,-6.665c-2.21719,-4.24625 -4.4075,-7.8475 -4.4075,-7.8475c-0.67187,-1.06156 -1.86781,-1.67969 -3.1175,-1.6125c-0.1075,0 -0.215,0 -0.3225,0zM159.96,10.4275c0.57781,1.03469 0.65844,1.03469 1.29,2.2575c1.04813,2.00219 2.05594,4.1925 2.795,6.02c0.73906,1.8275 1.075,3.48031 1.075,3.655c0,3.01 -2.15,5.16 -5.16,5.16c-3.01,0 -5.16,-2.15 -5.16,-5.16c0,-0.17469 0.33594,-1.8275 1.075,-3.655c0.73906,-1.8275 1.74688,-4.01781 2.795,-6.02c0.63156,-1.22281 0.71219,-1.22281 1.29,-2.2575zM12.04,17.3075c0.57781,1.03469 0.65844,1.03469 1.29,2.2575c1.04813,2.00219 2.05594,4.1925 2.795,6.02c0.73906,1.8275 1.075,3.48031 1.075,3.655c0,3.01 -2.15,5.16 -5.16,5.16c-3.01,0 -5.16,-2.15 -5.16,-5.16c0,-0.17469 0.33594,-1.8275 1.075,-3.655c0.73906,-1.8275 1.74688,-4.01781 2.795,-6.02c0.63156,-1.22281 0.71219,-1.22281 1.29,-2.2575zM86,27.52c41.41438,0 74.18844,25.34313 78.26,64.285c-5.32125,-3.96406 -12.85969,-8.17 -23.5425,-8.17c-15.34562,0 -25.63875,8.68063 -28.81,11.61c-2.96969,-3.35937 -11.08594,-11.61 -25.9075,-11.61c-14.95594,0 -23.13937,8.43875 -26.015,11.7175c-3.18469,-2.84875 -13.78687,-11.7175 -28.7025,-11.7175c-10.62906,0 -18.19437,4.3 -23.5425,8.2775c4.01781,-38.99562 36.80531,-64.3925 78.26,-64.3925z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+
+                <p>Our algorithms provide up to date, excact forecasts for each city. Each forecast records the highest
+                    temperature of the day, including a description of the day's weather.</p>
+
+            </div>
+
+            <div class="p2">
+
+                <h2 class="subtitle">Accurate Data</h2>
+
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80" height="80" viewBox="0 0 172 172"
+                    style=" fill:#000000;">
+                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                        stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                        font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                        style="mix-blend-mode: normal">
+                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                        <g fill="#663399" class="icon">
+                            <path
+                                d="M28.66667,21.5v57.33333h14.33333v-57.33333zM71.66667,21.5c-11.78895,0 -21.5,9.71105 -21.5,21.5v14.33333c0,11.78895 9.71105,21.5 21.5,21.5c11.78895,0 21.5,-9.71105 21.5,-21.5v-14.33333c0,-11.78895 -9.71105,-21.5 -21.5,-21.5zM100.33333,21.5v57.33333h14.33333v-57.33333zM129,21.5v57.33333h14.33333v-57.33333zM71.66667,35.83333c4.04938,0 7.16667,3.11728 7.16667,7.16667v14.33333c0,4.04938 -3.11729,7.16667 -7.16667,7.16667c-4.04938,0 -7.16667,-3.11728 -7.16667,-7.16667v-14.33333c0,-4.04938 3.11728,-7.16667 7.16667,-7.16667zM50.16667,93.16667c-11.78895,0 -21.5,9.71105 -21.5,21.5v14.33333c0,11.78895 9.71105,21.5 21.5,21.5c11.78895,0 21.5,-9.71105 21.5,-21.5v-14.33333c0,-11.78895 -9.71105,-21.5 -21.5,-21.5zM100.33333,93.16667c-11.78895,0 -21.5,9.71105 -21.5,21.5v14.33333c0,11.78895 9.71105,21.5 21.5,21.5c11.78895,0 21.5,-9.71105 21.5,-21.5v-14.33333c0,-11.78895 -9.71105,-21.5 -21.5,-21.5zM129,93.16667v57.33333h14.33333v-57.33333zM50.16667,107.5c4.04938,0 7.16667,3.11729 7.16667,7.16667v14.33333c0,4.04938 -3.11728,7.16667 -7.16667,7.16667c-4.04938,0 -7.16667,-3.11729 -7.16667,-7.16667v-14.33333c0,-4.04938 3.11728,-7.16667 7.16667,-7.16667zM100.33333,107.5c4.04938,0 7.16667,3.11729 7.16667,7.16667v14.33333c0,4.04938 -3.11728,7.16667 -7.16667,7.16667c-4.04938,0 -7.16667,-3.11729 -7.16667,-7.16667v-14.33333c0,-4.04938 3.11728,-7.16667 7.16667,-7.16667z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+
+                <p>The data that we provide on our website is accurate and up to date with databases from various data
+                    sources we've collected, most notably Teleport Cities. Each city has its data presented in concise
+                    and easy to read graphs. Learn things about each city's economy, job prospects, etc...</p>
+
+            </div>
+            <div class="p3">
+
+                <h2 class="subtitle">Famous Sites</h2>
+
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80" height="80" viewBox="0 0 172 172"
+                    style=" fill:#000000;">
+                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                        stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                        font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                        style="mix-blend-mode: normal">
+                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                        <g fill="#663399" class="icon">
+                            <path
+                                d="M61.5975,3.44c19.60531,30.61063 -6.5575,46.44 -6.5575,82.56c0,18.43625 11.55625,34.5075 27.735,41.28h-7.31c-14.14969,-8.4925 -23.865,-23.9725 -23.865,-41.28c0,-14.92906 4.28656,-26.52562 8.0625,-36.765c0.87344,-2.37844 1.70656,-4.6225 2.4725,-6.88c-3.72219,-16.43406 -24.4025,-21.715 -34.615,-21.715c11.69063,11.35469 10.32,25.8 10.32,58.48c0,30.58375 14.44531,43.08063 31.39,48.16h-17.63c-1.89469,0 -3.44,1.53188 -3.44,3.44v13.76c0,1.90813 1.54531,3.44 3.44,3.44h75.68c1.90813,0 3.44,-1.53187 3.44,-3.44v-13.76c0,-1.90812 -1.53187,-3.44 -3.44,-3.44h-9.7825c18.705,-9.36594 11.04563,-34.4 26.9825,-34.4c0,-7.56531 -5.50937,-13.76 -13.76,-13.76c-12.72531,0 -17.2,12.04 -17.2,24.08c0,7.59219 -6.16781,13.76 -13.76,13.76c-7.59219,0 -13.76,-6.16781 -13.76,-13.76c0,-22.70937 20.64,-26.18969 20.64,-52.675c0,-22.01062 -14.43187,-47.085 -45.0425,-47.085zM99.76,92.88c-5.6975,0 -10.32,4.6225 -10.32,10.32c0,5.6975 4.6225,10.32 10.32,10.32c5.6975,0 10.32,-4.6225 10.32,-10.32c0,-5.6975 -4.6225,-10.32 -10.32,-10.32zM55.04,151.36v17.2c0,1.90813 1.54531,3.44 3.44,3.44h61.92c1.90813,0 3.44,-1.53187 3.44,-3.44v-17.2z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+
+                <p>Each city page contains insight on famous tourist attractions that each user may be interested in
+                    visiting. Explore various locations through our imagery carousels and learn more about the rich and
+                    interesting culture of each city.</p>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <footer class="footer">
+
+        <div>
+
+            <p class="footeritem">Contact Us</p>
+        </div>
+        <div>
+
+            <img src="internal-resources/img/CityScApe.png" width="75px" height="75px " alt="CityScApe Logo"
+                id="botlogo">
+
+            <p id="copyright">&copy;CityScApe, All Rights Reserved</p>
+
+
+        </div>
+        <div>
+
+            <p class="footeritem">FAQ</p>
+        </div>
+
+    </footer>
+
+
+
+</body>
+
+</html>

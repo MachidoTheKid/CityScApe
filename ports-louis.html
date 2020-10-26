@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="internal-resources/css/mauritius.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
+
+    <script src='https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js'></script>
+
+
+
+    <title>CityScApe</title>
+</head>
+
+<body>
+    <header>
+
+        <div class="navi">
+
+            <div class="sub">
+
+
+                <ul id="submenu">
+                    <li class="subnavitem" id="it1"><a href="glasgow.html">Glasgow, Scotland</a></li>
+                    <li class="subnavitem" id="it2"><a href="ports-louis.html" id="active">Port Louis, Mauritius</a>
+                    </li>
+                    <li class="subnavitem" id="it3"><a href="tokyo.html">Tokyo, Japan</a></li>
+                    <li class="subnavitem" id="it4"><a href="aboutus.html">About Us</a></li>
+                    <li class="subnavitem" id="closer"><a href="">CLOSE MENU</a></li>
+
+                    <script>
+                        var close = document.getElementById('closer');
+                        var item = document.querySelectorAll('.subnavitem');
+
+
+                        close.addEventListener('click', function (closer) {
+
+                            document.getElementById("submenu").style.visibility = "hidden";
+                            document.getElementById("submenu").style.display = "none";
+
+
+
+
+
+                            closer.preventDefault();
+
+
+
+                        });
+                    </script>
+
+
+
+                </ul>
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <nav class="navbar" style="position: sticky;">
+
+                <div class="hamburger">
+
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+
+                </div>
+
+                <script>
+                    var ham = document.querySelector('.hamburger');
+
+                    ham.addEventListener('click', () => {
+
+                        document.getElementById("submenu").style.visibility = "visible";
+                        document.getElementById("submenu").style.display = "flex";
+
+
+                    });
+                </script>
+
+
+
+
+
+
+
+                <a class="navbar-brand" href="index.html">
+                    <img src="internal-resources/img/CityScApe.png" width="75px" height="75px " alt="CityScApe Logo"
+                        id="logo">
+                </a>
+                <ul class="navigation">
+                    <li class="navitem"><a href="glasgow.html">Glasgow, Scotland</a></li>
+                    <li class="navitem"><a href="" id="active">Port Louis, Mauritius</a></li>
+                    <li class="navitem"><a href="tokyo.html">Tokyo, Japan</a></li>
+                    <li class="navitem"><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </nav>
+
+
+
+        </div>
+
+        <div class="container-fluid" style="max-width: auto; height: 35em auto;">
+
+            <div class="banner">
+
+
+
+                <div class="time">
+
+                    <a href="https://time.is/Mauritius" id="time_is_link" rel="nofollow"
+                        style="font-size:36px; color: white;">Time in
+                        Mauritius:</a>
+                    <span id="Mauritius_z808" style="font-size:36px; color: white;"></span>
+                    <script src="//widget.time.is/en.js"></script>
+                    <script>
+                        time_is_widget.init({
+                            Mauritius_z808: {
+                                template: "TIME<br>DATE",
+                                date_format: "year-monthnum-daynum"
+                            }
+                        });
+                    </script>
+
+
+
+                </div>
+
+                <div class="daycontainer">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172"
+                        style=" fill:#000000;">
+                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <path d="M0,172v-172h172v172z" fill="none"></path>
+                            <g fill="#ffffff">
+                                <path
+                                    d="M80.625,16.125v26.875h10.75v-26.875zM40.3125,32.75391l-7.55859,7.55859l18.98047,19.14844l7.72656,-7.72656zM131.6875,32.75391l-19.14844,18.98047l7.72656,7.72656l18.98047,-19.14844zM86,48.375c-20.72315,0 -37.625,16.90185 -37.625,37.625c0,20.72315 16.90185,37.625 37.625,37.625c20.72315,0 37.625,-16.90185 37.625,-37.625c0,-20.72315 -16.90185,-37.625 -37.625,-37.625zM86,59.125c14.90723,0 26.875,11.96778 26.875,26.875c0,14.90723 -11.96777,26.875 -26.875,26.875c-14.90722,0 -26.875,-11.96777 -26.875,-26.875c0,-14.90722 11.96778,-26.875 26.875,-26.875zM16.125,80.625v10.75h26.875v-10.75zM129,80.625v10.75h26.875v-10.75zM51.73438,112.53906l-18.98047,19.14844l7.55859,7.55859l19.14844,-18.98047zM120.26563,112.53906l-7.72656,7.72656l19.14844,18.98047l7.55859,-7.55859zM80.625,129v26.875h10.75v-26.875z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                    <p class="day">Monday </p>
+                    <p class="temp">58 Degrees Celsius</p>
+                    <p class="desc"></p>
+                </div>
+
+                <div class="daycontainer">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172"
+                        style=" fill:#000000;">
+                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <path d="M0,172v-172h172v172z" fill="none"></path>
+                            <g fill="#ffffff">
+                                <path
+                                    d="M80.625,16.125v26.875h10.75v-26.875zM40.3125,32.75391l-7.55859,7.55859l18.98047,19.14844l7.72656,-7.72656zM131.6875,32.75391l-19.14844,18.98047l7.72656,7.72656l18.98047,-19.14844zM86,48.375c-20.72315,0 -37.625,16.90185 -37.625,37.625c0,20.72315 16.90185,37.625 37.625,37.625c20.72315,0 37.625,-16.90185 37.625,-37.625c0,-20.72315 -16.90185,-37.625 -37.625,-37.625zM86,59.125c14.90723,0 26.875,11.96778 26.875,26.875c0,14.90723 -11.96777,26.875 -26.875,26.875c-14.90722,0 -26.875,-11.96777 -26.875,-26.875c0,-14.90722 11.96778,-26.875 26.875,-26.875zM16.125,80.625v10.75h26.875v-10.75zM129,80.625v10.75h26.875v-10.75zM51.73438,112.53906l-18.98047,19.14844l7.55859,7.55859l19.14844,-18.98047zM120.26563,112.53906l-7.72656,7.72656l19.14844,18.98047l7.55859,-7.55859zM80.625,129v26.875h10.75v-26.875z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                    <p class=" day2">Tuesday </p>
+                    <p class="temp1">58 Degrees Celsius</p>
+                    <p class="desc1"></p>
+                </div>
+
+                <div class="daycontainer">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172"
+                        style=" fill:#000000;">
+                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <path d="M0,172v-172h172v172z" fill="none"></path>
+                            <g fill="#ffffff">
+                                <path
+                                    d="M80.625,16.125v26.875h10.75v-26.875zM40.3125,32.75391l-7.55859,7.55859l18.98047,19.14844l7.72656,-7.72656zM131.6875,32.75391l-19.14844,18.98047l7.72656,7.72656l18.98047,-19.14844zM86,48.375c-20.72315,0 -37.625,16.90185 -37.625,37.625c0,20.72315 16.90185,37.625 37.625,37.625c20.72315,0 37.625,-16.90185 37.625,-37.625c0,-20.72315 -16.90185,-37.625 -37.625,-37.625zM86,59.125c14.90723,0 26.875,11.96778 26.875,26.875c0,14.90723 -11.96777,26.875 -26.875,26.875c-14.90722,0 -26.875,-11.96777 -26.875,-26.875c0,-14.90722 11.96778,-26.875 26.875,-26.875zM16.125,80.625v10.75h26.875v-10.75zM129,80.625v10.75h26.875v-10.75zM51.73438,112.53906l-18.98047,19.14844l7.55859,7.55859l19.14844,-18.98047zM120.26563,112.53906l-7.72656,7.72656l19.14844,18.98047l7.55859,-7.55859zM80.625,129v26.875h10.75v-26.875z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                    <p class=" day3">Wednesday </p>
+                    <p class="temp2">58 Degrees Celsius</p>
+                    <p class="desc2"></p>
+                </div>
+
+                <div class="daycontainer">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172"
+                        style=" fill:#000000;">
+                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <path d="M0,172v-172h172v172z" fill="none"></path>
+                            <g fill="#ffffff">
+                                <path
+                                    d="M80.625,16.125v26.875h10.75v-26.875zM40.3125,32.75391l-7.55859,7.55859l18.98047,19.14844l7.72656,-7.72656zM131.6875,32.75391l-19.14844,18.98047l7.72656,7.72656l18.98047,-19.14844zM86,48.375c-20.72315,0 -37.625,16.90185 -37.625,37.625c0,20.72315 16.90185,37.625 37.625,37.625c20.72315,0 37.625,-16.90185 37.625,-37.625c0,-20.72315 -16.90185,-37.625 -37.625,-37.625zM86,59.125c14.90723,0 26.875,11.96778 26.875,26.875c0,14.90723 -11.96777,26.875 -26.875,26.875c-14.90722,0 -26.875,-11.96777 -26.875,-26.875c0,-14.90722 11.96778,-26.875 26.875,-26.875zM16.125,80.625v10.75h26.875v-10.75zM129,80.625v10.75h26.875v-10.75zM51.73438,112.53906l-18.98047,19.14844l7.55859,7.55859l19.14844,-18.98047zM120.26563,112.53906l-7.72656,7.72656l19.14844,18.98047l7.55859,-7.55859zM80.625,129v26.875h10.75v-26.875z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                    <p class=" day4">Thursday </p>
+                    <p class="temp3">58 Degrees Celsius</p>
+                    <p class="desc3"></p>
+
+
+                </div>
+
+
+
+
+
+            </div>
+
+            <script src="internal-resources/js/mauritius/mauritiusweather.js"></script>
+
+
+
+
+            <video id="backvid" poster="internal-resources/img/postimage.PNG" autoplay muted loop>
+
+                <source src="internal-resources/video/mur.mp4" type="video/mp4">
+
+            </video>
+
+
+
+        </div>
+
+
+
+
+
+    </header>
+
+    <main>
+
+        <div class="location">
+
+            <div class="map">
+
+                <iframe id="mapholder"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119849.8024731227!2d57.42673606100097!3d-20.162967198073837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x217c504941d601ef%3A0xfdc5186c91bdbb3d!2sPort%20Louis%2C%20Mauritius!5e0!3m2!1sen!2sza!4v1586958384096!5m2!1sen!2sza"
+                    width="400" height="300 auto" frameborder="0" style="border:0;" allowfullscreen=""
+                    aria-hidden="false" tabindex="0"></iframe>
+
+
+
+            </div>
+
+            <div class="map">
+
+                <h1 id="ctitle">WHERE IS PORT-LOUIS?</h1>
+
+                <p>Port Louis, city, capital, and main port of the island of Mauritius in the western Indian Ocean. It
+                    lies between a well-sheltered, deepwater harbour, accessible to ships through a break in the coral
+                    reef, and a semicircle of mountains.The city is the central collecting and clearing point for all
+                    imports and exports from Mauritius and
+                    its dependencies and is connected by road to the rest of the island. Sugar exports, once the
+                    mainstay of the economy, have been superceded in importance by manufacturing (notably textiles) and
+                    services (notably tourism).
+                </p>
+            </div>
+        </div>
+
+        <div class="content">
+
+
+
+            <div class="center">
+
+                <h1 id="ctitle">OVERALL QUALITY OF PORT-LOUIS</h1>
+
+
+            </div>
+
+            <div>
+
+            </div>
+
+            <div class="p1">
+
+                <h2 class="subtitle">A Quick Summary</h2>
+
+                <img src="internal-resources/img/mauritius.jpg" alt="mur"
+                    style="width: 150px; height: 150px; border-radius: 50%;">
+
+
+
+                <p>Port Louis, the cosmopolitan capital city of Mauritius was founded in <b>1735</b> by the French
+                    governor and
+                    pioneer Bertrand-François Mahé de La Bourdonnais. Located on the Northwest Coast, Port Louis is the
+                    <b>administrative</b> and <b>business</b> capital of the island.
+
+                    Buzzing with activity during the day, the city is full of cultural and historical treasures that
+                    should not be missed. Beyond the central market, which is a focal point for those who want to feel
+                    close to the soul of Mauritius, are many historic sites including the <b>Champ de Mars</b> - the
+                    oldest
+                    race course in the southern hemisphere.</p>
+
+                <p>Mauritius has seen a steady growth in it's GDP between <b>2006</b> and <b>2019</b>, prompting us to
+                    believe that its economic prospects are quite good.</p>
+
+
+            </div>
+
+            <div class="p3">
+
+                <iframe title="GDP Per Capita (2006-2018)" aria-label="Interactive line chart"
+                    id="datawrapper-chart-2W7be" src="//datawrapper.dwcdn.net/2W7be/3/" scrolling="no" frameborder="0"
+                    style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe>
+                <script type="text/javascript">
+                    ! function () {
+                        "use strict";
+                        window.addEventListener("message", function (a) {
+                            if (void 0 !== a.data["datawrapper-height"])
+                                for (var e in a.data["datawrapper-height"]) {
+                                    var t = document.getElementById("datawrapper-chart-" + e) || document
+                                        .querySelector("iframe[src*='" + e + "']");
+                                    t && (t.style.height = a.data["datawrapper-height"][e] + "px")
+                                }
+                        })
+                    }();
+                </script>
+
+
+
+            </div>
+
+
+        </div>
+        <div class="bg">
+
+            <div class="vtitle">
+
+                <h1>Places to visit</h1>
+            </div>
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-sm-12">
+
+                        <link rel="stylesheet"
+                            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+                            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+                            crossorigin="anonymous">
+
+                        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                            crossorigin="anonymous"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                            crossorigin="anonymous"></script>
+                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                            crossorigin="anonymous"></script>
+
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+                            <script>
+                                $('.carousel').carousel({
+                                    interval: 3000
+                                })
+                            </script>
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="internal-resources/img/tab.jpg" alt="First slide"
+                                        style="width: 300px; height: 550px;">
+                                    <div class="carousel-caption d-none d-md-block" id="caption1">
+                                        <h5 class="title">Trou Aux Biches</h5>
+                                        <p>For those who love snorkeling and swimming, Trou Aux Biches should be the
+                                            first place to visit in Mauritius. With gentle sands shelving calm, shallow
+                                            and clear water, this is an ideal place for a beach picnic with family and
+                                            friends. If you love street food, hog at the numerous stalls and cafes along
+                                            the coast. A variety of cuisines can be tried here. It is one of the top
+                                            places of interest in Mauritius.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="internal-resources/img/chamarel.jpg"
+                                        alt="Second slide" style="width: 300px; height: 550px;">
+                                    <div class="carousel-caption d-none d-md-block" id="caption2">
+                                        <h5 class="title">Chamarel Coloured Earth</h5>
+                                        <p>Chamarel Coloured Earth is an absolute must for you. This stupefying
+                                            attraction has gained popularity over time because of the fact that it
+                                            comprises of sand of seven different colors which is most definitely going
+                                            to leave you perplexed and shocked at the same time. The colors are not very
+                                            prominent because of the tropical climate of Mauritius but if you mix the
+                                            colored earth, you will be able to see a remarkable difference.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="internal-resources/img/casela.jpg" alt="Third slide"
+                                        style="width: 300px; height: 550px;">
+                                    <div class="carousel-caption d-none d-md-block" id="caption3">
+                                        <h5 class="title">Casela World Of Adventures</h5>
+                                        <p>Excited about safaris? Experience the wildlife safari organized at
+                                            Cascavelle, which is a must see out of many places to visit in Mauritius,
+                                            especially for the daredevils. Yes, the open jeep rides and elephant rides
+                                            here are not for the faint-hearted. Be prepared for a face to face with
+                                            tigers and leopards roaming freely in the safari trails. This is undoubtedly
+                                            considered to be one of the most adventure places to visit in Mauritius.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                                data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                                data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <div>
+
+            <div class="qol" style="height: 100% auto;">
+
+
+                <div class="qol1">
+                    <iframe title="Average Expenditure Of African Tourists Per Night(MUR)" aria-label="Bar Chart"
+                        id="datawrapper-chart-ll1gd" src="//datawrapper.dwcdn.net/ll1gd/2/" scrolling="no"
+                        frameborder="0" style="width: 0; min-width: 100% !important; border: none; margin-top: 165px;"
+                        height="330"></iframe>
+                    <script type="text/javascript">
+                        ! function () {
+                            "use strict";
+                            window.addEventListener("message", function (a) {
+                                if (void 0 !== a.data["datawrapper-height"])
+                                    for (var e in a.data["datawrapper-height"]) {
+                                        var t = document.getElementById("datawrapper-chart-" + e) || document
+                                            .querySelector("iframe[src*='" + e + "']");
+                                        t && (t.style.height = a.data["datawrapper-height"][e] + "px")
+                                    }
+                            })
+                        }();
+                    </script>
+
+
+                </div>
+
+                <div class="qol2">
+
+                    <h1 id="ctitle">TOURISM IN MAURITIUS</h1>
+                    <img src="internal-resources/img/tourisim mauritius.jpg" alt="tourism"
+                        style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 15px;">
+                    <br>
+
+                    <p>Mauritius tourism industry has experienced drastic growth in the last decade.
+
+                        The Island of Mauritius had about <b>18,000</b> visitors in 1970 and in the last few years this
+                        number
+                        is almost reaching <b>1 million</b> visitors to Mauritius annually.
+
+                        The tourism sector is one of the main pillars of the local economy, and created 30,000 full time
+                        job equivalents in 2000 and the number today it is estimated that almost 40,000 has full direct
+                        employment in the tourism sector.
+
+                        Tourists visiting Mauritius are primarily European, mainly French and British.
+                        .</p>
+
+                    <p>Tourism from mainland Africa to Mauritius has been booming as well. As you can see in the graph,
+                        African tourists expenditure per night in Mauritius experienced a significant increase between
+                        <b>1998 and 2015</b>, though there is a noticeable decrease between <b>2010 and 2011</b>.</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="calculator" style="height: auto;">
+
+                <div class="calc1">
+
+                    <h1 id="ctitle">JOB PROSPECTS</h1>
+                    <img src="internal-resources/img/workMU.jpg" alt="job"
+                        style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 15px;">
+                    <br>
+
+                    <p>Although <b>French</b> is more widely spoken in Mauritius than English, the latter is still the
+                        language
+                        of business and the official language of the island, and therefore heavily used in most
+                        corporate companies. Therefore, it is important to have a good knowledge of English as well as
+                        French. Additionally, in order to be eligible to work in Mauritius, the employer has to be able
+                        to <b>justify hiring a foreigner rather than a Mauritian citizen</b>, especially if the skillset
+                        required can easily be found in Mauritius. Moreover, the foreign professional must meet specific
+                        remuneration criteria. It is therefore important to have the work experiences and professional
+                        background that are sought after and difficult to find in Mauritius.</p>
+
+                    <p>Below is a list of jobs that are currently on high demand on the market in Mauritius.</p>
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+
+                                <th scope="col">Jobs On Demand</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+
+                                <td>Web Developer</td>
+
+                            </tr>
+                            <tr>
+
+                                <td>Financial analystt</td>
+
+                            </tr>
+                            <tr>
+
+                                <td>Digital Marketer</td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>HR Coordinator</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+    </main>
+
+    <footer class="footer">
+
+        <div>
+
+            <p class="footeritem">Contact Us</p>
+        </div>
+        <div>
+
+            <img src="internal-resources/img/CityScApe.png" width="75px" height="75px " alt="CityScApe Logo"
+                id="botlogo">
+
+            <p id="copyright">&copy;CityScApe, All Rights Reserved</p>
+
+
+        </div>
+        <div>
+
+            <p class="footeritem">FAQ</p>
+        </div>
+
+    </footer>
+
+
+
+
+
+</body>
+
+</html>

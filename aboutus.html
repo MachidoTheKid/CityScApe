@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="internal-resources/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
+    <title>CityScApe</title>
+</head>
+
+<body>
+    <header>
+        <div class="navi">
+
+            <div class="sub">
+
+
+                <ul id="submenu">
+                    <li class="subnavitem" id="it1"><a href="glasgow.html">Glasgow, Scotland</a></li>
+                    <li class="subnavitem" id="it2"><a href="ports-louis.html">Port Louis, Mauritius</a></li>
+                    <li class="subnavitem" id="it3"><a href="tokyo.html">Tokyo, Japan</a></li>
+                    <li class="subnavitem" id="it4"><a href="aboutus.html">About Us</a></li>
+                    <li class="subnavitem" id="closer"><a href="">CLOSE MENU</a></li>
+
+                    <script>
+                        var close = document.getElementById('closer');
+                        var item = document.querySelectorAll('.subnavitem');
+
+
+                        close.addEventListener('click', function (closer) {
+
+                            document.getElementById("submenu").style.visibility = "hidden";
+                            document.getElementById("submenu").style.display = "none";
+
+
+
+
+
+                            closer.preventDefault();
+
+
+
+                        });
+                    </script>
+
+
+
+                </ul>
+
+
+
+
+            </div>
+
+            <nav class="navbar" style="position: sticky;">
+
+                <div class="hamburger">
+
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+
+                </div>
+
+                <script>
+                    var ham = document.querySelector('.hamburger');
+
+                    ham.addEventListener('click', () => {
+
+                        document.getElementById("submenu").style.visibility = "visible";
+                        document.getElementById("submenu").style.display = "flex";
+
+
+                    });
+                </script>
+
+                <a class="navbar-brand" href="index.html">
+                    <img src="internal-resources/img/CityScApe.png" width="75px" height="75px " alt="CityScApe Logo"
+                        id="logo">
+                </a>
+                <ul class="navigation">
+                    <li class="navitem"><a href="glasgow.html">Glasgow, Scotland</a></li>
+                    <li class="navitem"><a href="ports-louis.html">Port Louis, Mauritius</a></li>
+                    <li class="navitem"><a href="tokyo.html">Tokyo, Japan</a></li>
+                    <li class="navitem"><a href="aboutus.html" id="active">About Us</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+
+
+
+        <video id="backvid" poster="internal-resources/img/postimage.PNG" autoplay muted loop>
+
+            <source src="internal-resources/video/cities.mp4" type="video/mp4">
+
+        </video>
+
+
+
+    </header>
+
+    <main>
+
+        <div class="content" style="width: 100%; margin: 0; height:  auto;">
+
+            <div></div>
+
+            <div class="center">
+                <h1 id="ctitle">OUR DATA PROVIDERS</h1>
+
+
+            </div>
+            <div></div>
+
+            <div class="p1">
+
+                <h2 class="subtitle"><a href="https://teleport.org/about-us/" style="color: rebeccapurple;">TELEPORT
+                        CITIES</a></h2>
+
+
+                <p>"Teleport builds software to move you to the best place to live and work. Explore the best cities
+                    based on your personal preferences, and we’ll lend you a hand with preparing and executing the move.
+
+                    Many of us were previously building Skype, which was quite effective in making the world smaller in
+                    a metaphorical sense. We now aim to make physically rearranging the human population just as easy.
+                    "</p>
+
+            </div>
+
+            <div class="p2">
+
+                <h2 class="subtitle"><a href="https://corporate.accuweather.com/about"
+                        style="color: rebeccapurple;">ACCUWEATHER</a></h2>
+
+                <p>"AccuWeather, recognized and documented as the most accurate source of weather forecasts and warnings
+                    in the world, has saved tens of thousands of lives, prevented hundreds of thousands of injuries and
+                    tens of billions of dollars in property damage."</p>
+
+                <br>
+
+                <p><b>CityScape is a dedicated service created to help you move to your new dream location.</b></p>
+
+            </div>
+            <div class="p3">
+
+                <h2 class="subtitle"><a href="https://www.google.com/maps/about/#!/"
+                        style="color: rebeccapurple;">GOOGLE MAPS</a></h2>
+
+                <p>Google Maps is a web mapping service developed by Google. It offers satellite imagery, aerial
+                    photography, street maps, 360° interactive panoramic views of streets, real-time traffic conditions,
+                    and route planning for traveling by foot, car, bicycle and air, or public transportation.</p>
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+    <footer class="footer" style="margin: 0; height: 200px;">
+
+
+        <div>
+
+            <p class="footeritem">Contact Us</p>
+        </div>
+        <div>
+
+            <img src="internal-resources/img/CityScApe.png" width="75px" height="75px " alt="CityScApe Logo"
+                id="botlogo">
+
+            <p id="copyright">&copy;CityScApe, All Rights Reserved</p>
+
+
+        </div>
+        <div>
+
+            <p class="footeritem">FAQ</p>
+        </div>
+
+    </footer>
+
+
+
+</body>
+
+</html>

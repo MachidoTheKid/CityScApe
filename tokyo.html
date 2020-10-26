@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="internal-resources/css/city.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
+
+    <script src='https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js'></script>
+
+
+
+    <title>CityScApe</title>
+</head>
+
+<body>
+    <header>
+
+        <div class="navi">
+
+            <div class="sub">
+
+
+                <ul id="submenu">
+                    <li class="subnavitem" id="it1"><a href="glasgow.html">Glasgow, Scotland</a></li>
+                    <li class="subnavitem" id="it2"><a href="ports-louis.html">Port Louis, Mauritius</a></li>
+                    <li class="subnavitem" id="it3"><a href="tokyo.html" id="active">Tokyo, Japan</a></li>
+                    <li class="subnavitem" id="it4"><a href="aboutus.html">About Us</a></li>
+                    <li class="subnavitem" id="closer"><a href="">CLOSE MENU</a></li>
+
+                    <script>
+                        var close = document.getElementById('closer');
+                        var item = document.querySelectorAll('.subnavitem');
+
+
+                        close.addEventListener('click', function (closer) {
+
+                            document.getElementById("submenu").style.visibility = "hidden";
+                            document.getElementById("submenu").style.display = "none";
+
+
+
+
+
+                            closer.preventDefault();
+
+
+
+                        });
+                    </script>
+
+
+
+                </ul>
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <nav class="navbar" style="position: sticky;">
+
+                <div class="hamburger">
+
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+
+                </div>
+
+                <script>
+                    var ham = document.querySelector('.hamburger');
+
+                    ham.addEventListener('click', () => {
+
+                        document.getElementById("submenu").style.visibility = "visible";
+                        document.getElementById("submenu").style.display = "flex";
+
+
+                    });
+                </script>
+
+
+
+
+
+
+
+                <a class="navbar-brand" href="index.html">
+                    <img src="internal-resources/img/CityScApe.png" width="75px" height="75px " alt="CityScApe Logo"
+                        id="logo">
+                </a>
+                <ul class="navigation">
+                    <li class="navitem"><a href="glasgow.html">Glasgow, Scotland</a></li>
+                    <li class="navitem"><a href="ports-louis.html">Port Louis, Mauritius</a></li>
+                    <li class="navitem"><a href="tokyo.html" id="active">Tokyo, Japan</a></li>
+                    <li class="navitem"><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </nav>
+
+
+
+        </div>
+
+        <div class="container-fluid" style="max-width: auto; height: 35em auto;">
+
+            <div class="banner">
+
+
+
+                <div class="time">
+
+                    <a href="https://time.is/Tokyo" id="time_is_link" rel="nofollow"
+                        style="font-size:36px; color: white;">Time in
+                        Tokyo:</a>
+                    <span id="Tokyo_z444" style="font-size:36px; color: white;"></span>
+                    <script src="//widget.time.is/en.js"></script>
+                    <script>
+                        time_is_widget.init({
+                            Tokyo_z444: {
+                                template: "TIME<br>DATE",
+                                date_format: "year-monthnum-daynum"
+                            }
+                        });
+                    </script>
+
+
+                </div>
+
+                <div class="daycontainer">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172"
+                        style=" fill:#000000;">
+                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <path d="M0,172v-172h172v172z" fill="none"></path>
+                            <g fill="#ffffff">
+                                <path
+                                    d="M80.625,16.125v26.875h10.75v-26.875zM40.3125,32.75391l-7.55859,7.55859l18.98047,19.14844l7.72656,-7.72656zM131.6875,32.75391l-19.14844,18.98047l7.72656,7.72656l18.98047,-19.14844zM86,48.375c-20.72315,0 -37.625,16.90185 -37.625,37.625c0,20.72315 16.90185,37.625 37.625,37.625c20.72315,0 37.625,-16.90185 37.625,-37.625c0,-20.72315 -16.90185,-37.625 -37.625,-37.625zM86,59.125c14.90723,0 26.875,11.96778 26.875,26.875c0,14.90723 -11.96777,26.875 -26.875,26.875c-14.90722,0 -26.875,-11.96777 -26.875,-26.875c0,-14.90722 11.96778,-26.875 26.875,-26.875zM16.125,80.625v10.75h26.875v-10.75zM129,80.625v10.75h26.875v-10.75zM51.73438,112.53906l-18.98047,19.14844l7.55859,7.55859l19.14844,-18.98047zM120.26563,112.53906l-7.72656,7.72656l19.14844,18.98047l7.55859,-7.55859zM80.625,129v26.875h10.75v-26.875z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                    <p class="day">Monday </p>
+                    <p class="temp">58 Degrees Celsius</p>
+                    <p class="desc"></p>
+                </div>
+
+                <div class="daycontainer">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172"
+                        style=" fill:#000000;">
+                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <path d="M0,172v-172h172v172z" fill="none"></path>
+                            <g fill="#ffffff">
+                                <path
+                                    d="M80.625,16.125v26.875h10.75v-26.875zM40.3125,32.75391l-7.55859,7.55859l18.98047,19.14844l7.72656,-7.72656zM131.6875,32.75391l-19.14844,18.98047l7.72656,7.72656l18.98047,-19.14844zM86,48.375c-20.72315,0 -37.625,16.90185 -37.625,37.625c0,20.72315 16.90185,37.625 37.625,37.625c20.72315,0 37.625,-16.90185 37.625,-37.625c0,-20.72315 -16.90185,-37.625 -37.625,-37.625zM86,59.125c14.90723,0 26.875,11.96778 26.875,26.875c0,14.90723 -11.96777,26.875 -26.875,26.875c-14.90722,0 -26.875,-11.96777 -26.875,-26.875c0,-14.90722 11.96778,-26.875 26.875,-26.875zM16.125,80.625v10.75h26.875v-10.75zM129,80.625v10.75h26.875v-10.75zM51.73438,112.53906l-18.98047,19.14844l7.55859,7.55859l19.14844,-18.98047zM120.26563,112.53906l-7.72656,7.72656l19.14844,18.98047l7.55859,-7.55859zM80.625,129v26.875h10.75v-26.875z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                    <p class=" day2">Tuesday </p>
+                    <p class="temp1">58 Degrees Celsius</p>
+                    <p class="desc1"></p>
+                </div>
+
+                <div class="daycontainer">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172"
+                        style=" fill:#000000;">
+                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <path d="M0,172v-172h172v172z" fill="none"></path>
+                            <g fill="#ffffff">
+                                <path
+                                    d="M80.625,16.125v26.875h10.75v-26.875zM40.3125,32.75391l-7.55859,7.55859l18.98047,19.14844l7.72656,-7.72656zM131.6875,32.75391l-19.14844,18.98047l7.72656,7.72656l18.98047,-19.14844zM86,48.375c-20.72315,0 -37.625,16.90185 -37.625,37.625c0,20.72315 16.90185,37.625 37.625,37.625c20.72315,0 37.625,-16.90185 37.625,-37.625c0,-20.72315 -16.90185,-37.625 -37.625,-37.625zM86,59.125c14.90723,0 26.875,11.96778 26.875,26.875c0,14.90723 -11.96777,26.875 -26.875,26.875c-14.90722,0 -26.875,-11.96777 -26.875,-26.875c0,-14.90722 11.96778,-26.875 26.875,-26.875zM16.125,80.625v10.75h26.875v-10.75zM129,80.625v10.75h26.875v-10.75zM51.73438,112.53906l-18.98047,19.14844l7.55859,7.55859l19.14844,-18.98047zM120.26563,112.53906l-7.72656,7.72656l19.14844,18.98047l7.55859,-7.55859zM80.625,129v26.875h10.75v-26.875z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                    <p class=" day3">Wednesday </p>
+                    <p class="temp2">58 Degrees Celsius</p>
+                    <p class="desc2"></p>
+                </div>
+
+                <div class="daycontainer">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 172 172"
+                        style=" fill:#000000;">
+                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <path d="M0,172v-172h172v172z" fill="none"></path>
+                            <g fill="#ffffff">
+                                <path
+                                    d="M80.625,16.125v26.875h10.75v-26.875zM40.3125,32.75391l-7.55859,7.55859l18.98047,19.14844l7.72656,-7.72656zM131.6875,32.75391l-19.14844,18.98047l7.72656,7.72656l18.98047,-19.14844zM86,48.375c-20.72315,0 -37.625,16.90185 -37.625,37.625c0,20.72315 16.90185,37.625 37.625,37.625c20.72315,0 37.625,-16.90185 37.625,-37.625c0,-20.72315 -16.90185,-37.625 -37.625,-37.625zM86,59.125c14.90723,0 26.875,11.96778 26.875,26.875c0,14.90723 -11.96777,26.875 -26.875,26.875c-14.90722,0 -26.875,-11.96777 -26.875,-26.875c0,-14.90722 11.96778,-26.875 26.875,-26.875zM16.125,80.625v10.75h26.875v-10.75zM129,80.625v10.75h26.875v-10.75zM51.73438,112.53906l-18.98047,19.14844l7.55859,7.55859l19.14844,-18.98047zM120.26563,112.53906l-7.72656,7.72656l19.14844,18.98047l7.55859,-7.55859zM80.625,129v26.875h10.75v-26.875z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                    <p class=" day4">Thursday </p>
+                    <p class="temp3">58 Degrees Celsius</p>
+                    <p class="desc3"></p>
+
+
+                </div>
+
+
+
+
+
+            </div>
+
+            <script src="internal-resources/js/tokyo/tokyoweather.js"></script>
+
+
+
+
+            <video id="backvid" poster="internal-resources/img/postimage.PNG" autoplay muted loop>
+
+                <source src="internal-resources/video/tokyo.mp4" type="video/mp4">
+
+            </video>
+
+
+
+        </div>
+
+
+
+
+
+    </header>
+
+    <main>
+
+        <div class="location">
+
+            <div class="map">
+                <iframe id="mapholder"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d414895.2111496369!2d139.46068054017593!3d35.667919120148376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b857628235d%3A0xcdd8aef709a2b520!2sTokyo%2C%20Japan!5e0!3m2!1sen!2sza!4v1586933537014!5m2!1sen!2sza"
+                    width="400" height="300 auto" frameborder="0" style="border:0;" allowfullscreen=""
+                    aria-hidden="false" tabindex="0"></iframe>
+
+
+
+            </div>
+
+            <div class="map">
+
+                <h1 id="ctitle">WHERE IS TOKYO?</h1>
+
+                <p>Tokyo (東京, Tōkyō) is <b>Japan's capital</b> and the world's most populous metropolis. It is also one
+                    of
+                    Japan's 47 prefectures, consisting of 23 central city wards and multiple cities, towns and villages
+                    west of the city center. The Izu and Ogasawara Islands are also part of Tokyo. Today, Tokyo offers a
+                    seemingly unlimited choice of <b>shopping, entertainment, culture and dining</b> to its visitors.
+                    The
+                    city's history can be appreciated in districts such as Asakusa and in many excellent museums,
+                    historic temples and gardens. Contrary to common perception, Tokyo also offers a number of
+                    attractive <b>green</b> spaces in the city center and within relatively short train rides at its
+                    outskirts.
+                </p>
+            </div>
+        </div>
+
+        <div class="content">
+
+
+
+            <div class="center">
+
+                <h1 id="ctitle">OVERALL QUALITY OF TOKYO</h1>
+
+
+            </div>
+
+            <div>
+
+            </div>
+
+            <div class="p1">
+
+                <h2 class="subtitle">A Quick Summary</h2>
+
+                <img src="internal-resources/img/tokyo.jpg" alt="tokyo"
+                    style="width: 150px; height: 150px; border-radius: 50%;">
+
+
+
+                <p>Tokyo is one of the most <b>vibrant and modern</b> cities in the world. It provides a wide range of
+                    opportunities from recreational activities to job offers, and is therefore an appealing choice for
+                    people looking for a change. When it comes to food, you are spoiled with choices: there are more
+                    restaurants than you could visit in your lifetime. It is also a relatively <b>green city</b>, as
+                    <b>3.6%</b> of Tokyo is covered by parks and forests, and, despite its size, it is still among the
+                    <b>safest cities</b> in the world. Our data shows that it currently holds a <b>10/10</b> score for
+                    safety. Japan's healthcare is also really great, holding a score of<b> 9.3/10</b>.</p>
+
+
+            </div>
+
+            <div class="p3">
+
+                <canvas id="chart" width: 5; height: 5;>
+
+                    <script src='internal-resources/js/tokyo/tokyochartting.js'></script>
+
+
+
+                </canvas>
+                <div>
+                    <p id="ranking"></p>
+                    <script src='internal-resources/js/tokyo/tokyochartting.js'></script>
+
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+        <div class="bg">
+
+            <div class="vtitle">
+
+                <h1>Places to visit</h1>
+            </div>
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-sm-12">
+
+                        <link rel="stylesheet"
+                            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+                            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+                            crossorigin="anonymous">
+
+                        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                            crossorigin="anonymous"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                            crossorigin="anonymous"></script>
+                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                            crossorigin="anonymous"></script>
+
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+                            <script>
+                                $('.carousel').carousel({
+                                    interval: 3000
+                                })
+                            </script>
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="internal-resources/img/harajuku.jpg"
+                                        alt="First slide" style="width: 300px; height: 550px;">
+                                    <div class="carousel-caption d-none d-md-block" id="caption1">
+                                        <h5 class="title">Harajuku</h5>
+                                        <p>Buzzing Harajuku is renowned for colorful street art and youth fashion, with
+                                            quirky vintage clothing stores and cosplay shops along Takeshita Street, and
+                                            traditional, upmarket boutiques on leafy Omotesando Avenue. Small, trendy
+                                            bars fill the surrounding lanes, while dessert shops and carts specialize in
+                                            sweet crêpes, donuts, and bubble tea.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="internal-resources/img/oedo.jpg" alt="Second slide"
+                                        style="width: 300px; height: 550px;">
+                                    <div class="carousel-caption d-none d-md-block" id="caption2">
+                                        <h5 class="title">Ōedo-Onsen Monogatari</h5>
+                                        <p>The main reason for visiting Oedo-Onsen Monogatari is for the hot springs,
+                                            and there are plenty to choose from. A large bath for general soaking,
+                                            outdoor rotenburo baths, old-style barrel tubs, and mist saunas are all
+                                            available in the extensive bathing rooms.
+
+                                            One of the most popular baths is Kinu-No-Yu (Bath of Silk), which has
+                                            micro-bubbles in the water to leave your skin feeling smooth and silky after
+                                            your dip. You can also pay extra to experience the Himalayan rock salt
+                                            sauna, which is great for stress relief.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="internal-resources/img/tokyoskytree.jpg"
+                                        alt="Third slide" style="width: 300px; height: 550px;">
+                                    <div class="carousel-caption d-none d-md-block" id="caption3">
+                                        <h5 class="title">Tokyo Skytree</h5>
+                                        <p>Spend an evening exploring the world’s tallest tower, the 634-metre-high
+                                            (2,080-foot) Tokyo Skytree. Check out the boutiques on your way up to the
+                                            observation decks, where you’ll get unrivalled 360-degree views of the city;
+                                            on clear days, you might even be able to see Mount Fuji. Skytree Town (also
+                                            known as Solamachi) at the base of the tower is where you’ll find many
+                                            shopping and dining options.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                                data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                                data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <div>
+
+            <div class="qol">
+
+
+                <div class="qol1">
+
+                    <canvas id="myChart" width="100" height="100">
+
+                        <script src="internal-resources/js/tokyo/tokyoqol.js"></script>
+
+                    </canvas>
+
+
+                </div>
+
+                <div class="qol2">
+
+                    <h1 id="ctitle">COST OF LIVING</h1>
+                    <img src="internal-resources/img/livingtokyo.jpg" alt="tokyobuildings"
+                        style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 15px;">
+                    <br>
+
+                    <p>Japan has a reputation for its <b>high living costs</b>, especially <b>Tokyo</b> which annually
+                        makes it into
+                        the lists of the world's top ten most expensive cities. Like most major cities in the world,
+                        rent tends to make up a large chunk of living costs in Japan, followed by car ownership and
+                        transport. However, living in Japan is <b>not always expensive</b> and costs can be reigned in
+                        depending on where you are located, by choosing <b>local products</b>, and by living sensibly
+                        within
+                        your salary.</p>
+
+                    <p>If you’re someone who deeply values going to the gym, then when living in Tokyo you’ll have to be
+                        ready to shell out quite a bit of money. Gym memberships costs almost <b>$100 per month</b>. The
+                        monthly costs of public transport aren’t necessarily the cheapest out there, standing at
+                        <b>$80</b>.
+                        However, other general commodities are somewhat more reasonable. Interestingly enough, the price
+                        of a movie ticket and a taxi cost the same, standing at <b>$15</b>. As you can see, living in
+                        Tokyo can
+                        be quite lovely, provided that you’re also ready to spend a bit of cash on your lifestyle. </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="calculator">
+
+                <div>
+
+                    <h1 id="ctitle">JOB PROSPECTS</h1>
+                    <img src="internal-resources/img/tokyojob.jpg" alt="job"
+                        style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 15px;">
+                    <br>
+
+                    <p>By living and working in Japan, you'll immerse yourself in its unique way of life and gain
+                        experience of Japanese business. The cost of living is higher in major cities such as Tokyo -
+                        however, these popular urban areas often bring fellow overseas travellers together and help
+                        create a sense of community.
+
+                        Learning Japanese prior to arrival is certainly recommended, although you'll find opportunities
+                        to take courses that will get you up to speed.</p>
+
+                    <p>Below is a table detailing the currently top ranked jobs on the market as well as their
+                        respective median salaries.</p>
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Rank</th>
+                                <th scope="col">Job</th>
+                                <th scope="col">Median Salary</th>
+                                <th scope="col">Salary Rank Compared To Other Cities</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Dentist</td>
+                                <td>$104,616</td>
+                                <td><b>65</b>/265</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Pharmacist</td>
+                                <td>$89,079</td>
+                                <td><b>43</b>/265</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Attorney</td>
+                                <td>$84,530</td>
+                                <td><b>38</b>/265</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="c1">
+                    <script async class="teleport-widget-script"
+                        data-url="https://teleport.org/cities/tokyo/widget/salaries/?currency=USD" data-max-width="1000"
+                        data-height="300" src="https://teleport.org/assets/firefly/widget-snippet.min.js"></script>
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+    </main>
+
+    <footer class="footer">
+
+        <div>
+
+            <p class="footeritem">Contact Us</p>
+        </div>
+        <div>
+
+            <img src="internal-resources/img/CityScApe.png" width="75px" height="75px " alt="CityScApe Logo"
+                id="botlogo">
+
+            <p id="copyright">&copy;CityScApe, All Rights Reserved</p>
+
+
+        </div>
+        <div>
+
+            <p class="footeritem">FAQ</p>
+        </div>
+
+    </footer>
+
+
+
+
+
+</body>
+
+</html>
